@@ -1,0 +1,325 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+:root{
+    --color1--:#1c1c1c;
+    --color2--:#2c2c2c;
+    --color3--:#727272;
+    --color4--:#ca331f;
+}
+body{
+    background: var(--color1--);
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow: hidden;
+}
+nav{
+    position: relative;
+    width: 100%;
+    height: 10%;
+    background-color: var(--color2--);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid var(--color3--);
+}
+.navLinks{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.navLinks div{
+    width: 90px;
+    height: 80%;
+    background-color: var(--color1--);
+    cursor: pointer;
+    border: 2px solid var(--color4--);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+}
+.userName{
+    color: white;
+    font-size: 22px;
+}
+.navLinks div:hover{
+    background-color: #464646;
+}
+.logo{
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    color:var(--color4--);
+    font-weight: bold;
+    width: 200px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    cursor: default;
+}
+.content{
+    position: relative;
+    width: 100%;
+    height: 90%;
+    display: none;
+}
+.leftBar{
+    position: relative;
+    width: 15%;
+    height: 100%;
+    background-color: var(--color2--);
+    border-right: 2px solid var(--color3--);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    color: white;
+}
+.main{
+    position: relative;
+    width: 85%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 50px;
+    justify-content: start;
+}
+.main div{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background-color: var(--color2--);
+    margin: 10px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.main div:hover{
+    background-color: var(--color3--);
+}
+.main div h1{
+    font-size: 17px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.main div h2{
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: lightblue;
+    font-size: 12px;
+}
+.fa-desktop{
+    position: relative;
+    font-size: 35px;
+    color: var(--color4--);
+}
+.fa-desktop i{
+    position: absolute;
+    left: 50%;
+    top: 15%;
+    transform: translateX(-50%);
+    font-size: 15px;
+    display: none;
+}
+.fa-house,.fa-sack-dollar,.fa-user{
+    font-size: 30px;
+}
+.selected{
+    background-color:#727272 !important;
+}
+.rightclickMenu{
+    width: 250px;
+    height: 300px;
+    position: absolute;
+    border: 2px solid var(--color4--);
+    z-index: 1000;
+    background-color: var(--color3--);
+    display: none;
+}
+.rightclickMenu li{
+    list-style-type: none;
+    padding: 10px;
+    cursor: pointer;
+    border: 1px solid var(--color2--);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+.rightclickMenu li:hover{
+    background-color: var(--color1--);
+    color: white;
+}
+.priceDiv{
+    width: 100%;
+    height: 30%;
+    /* background-color: red; */
+    margin-top: 30%;
+    border-top: 1px solid var(--color3--);
+    border-bottom: 1px solid var(--color3--);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+.priceDiv .ipPrice{
+    height: 30px;
+    width: 80%;
+    outline: none;
+    border: none;
+    border-radius: 7px;
+    font-size: 20px;
+    padding-left: 10px;
+    margin-top: 20px;
+}
+.priceDiv .ipPrice:focus{
+    transform: scaleX(1.1);
+    border-left: 4px solid var(--color4--);
+}
+.ipPriceSub{
+    width: 40%;
+    height: 23px;
+    outline: none;
+    border: none;
+    margin-top: 10px;
+    cursor: pointer;
+    font-size: larger;
+    border-radius: 5px;
+}
+.ipPriceSub:hover{
+    background-color: var(--color3--);
+    border: var(--color1--) 2px solid;
+    color: white;
+}
+.timeDiv{
+    width: 90%;
+    height: 70%;
+    /* background-color: red; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.timeDiv div{
+    width: 45%;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color1--);
+    cursor: pointer;
+    font-weight: bold;
+}
+.timeDiv div:hover{
+    background-color: var(--color3--);
+    border: 1px solid var(--color4--);
+}
+.time{
+    margin-top: 30px;
+    font-size: 30px;
+}
+.endDiv{
+    position: fixed;
+    width: 45%;
+    height: 55%;
+    background-color: var(--color2--);
+    border: 3px solid var(--color3--);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: none;
+    justify-content: end;
+    align-items: center;
+    flex-direction: column;
+}
+.endDiv div{
+    width: 100%;
+    /* background-color: red; */
+    height: 20%;
+    margin-top: 20px;
+}
+.topDiv{
+    height: 80% !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: lightblue;
+    font-size: 14px;
+}
+.topDiv h1{
+    margin: 20px;
+}
+.botDiv{
+    display: flex;
+    justify-self: start;
+    align-items: center;
+}
+.botDiv div{
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80%;
+    margin: 20px;
+    cursor: pointer;
+    background-color: lightblue;
+    font-size: larger;
+}
+.botDiv div:hover{
+    background-color: var(--color3--);
+    color: white;
+}
+.userPage{
+    position: fixed;
+    width: 40%;
+    height: 30%;
+    background-color: var(--color1--);
+    border: var(--color3--) 3px solid;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.userPage input{
+    margin: 15px;
+    width: 70%;
+    height: 40px;
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-size: 18px;
+    background-color: white;
+    border-radius: 8px;
+}
+.userPage input:focus{
+    transform: scale(1.1);
+}
+.submit{
+    background-color: var(--color3--) !important;
+    cursor: pointer;
+    color: lightblue;
+    width: 60% !important;
+}
+.submit:hover{
+    background-color: var(--color2--) !important;
+}
+.submit:focus{
+    transform: none !important;
+}
